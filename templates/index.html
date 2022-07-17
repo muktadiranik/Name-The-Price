@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>house_price_prediction_1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+</head>
+
+<body>
+    <div class="img"></div>
+    <center>
+        <div class="container">
+            <div class="box">
+                <div class="box-row">
+                    <div class="box-cell box1">
+                        <h2>LotArea</h2>
+                        <input class="int" type="text" id="uiLotArea" class="floatLabel" name="" value="1200">
+                        <h2>TotalBsmtSF</h2>
+                        <input class="int" type="text" id="uiTotalBsmtSF" class="floatLabel" name="" value="1200">
+                        <h2>GrLivArea</h2>
+                        <input class="int" type="text" id="uiGrLivArea" class="floatLabel" name="" value="1200">
+                        <h2>FullBath</h2>
+                        <input class="int" type="text" id="uiFullBath" class="floatLabel" name="" value="2">
+                        <h2>BedroomAbvGr</h2>
+                        <input class="int" type="text" id="uiBedroomAbvGr" class="floatLabel" name="" value="2">
+                        <h2>KitchenAbvGr</h2>
+                        <input class="int" type="text" id="uiKitchenAbvGr" class="floatLabel" name="" value="2">
+                        <h2>Utilities</h2>
+                        <div>
+                            <select class="uiUtilities" name="" id="uiUtilities">
+                                <option value="" disabled="disabled" selected="selected">Choose a Utilities</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-cell box2">
+                        <h2>Alley</h2>
+                        <div>
+                            <select class="uiAlley" name="" id="uiAlley">
+                                <option value="" disabled="disabled" selected="selected">Choose a Alley</option>
+                            </select>
+                        </div>
+                        <h2>Street</h2>
+                        <div>
+                            <select class="uiStreet" name="" id="uiStreet">
+                                <option value="" disabled="disabled" selected="selected">Choose a Street</option>
+                            </select>
+                        </div>
+                        <h2>Porch</h2>
+                        <div>
+                            <select class="uiPorch" name="" id="uiPorch">
+                                <option value="" disabled="disabled" selected="selected">Choose a Porch</option>
+                            </select>
+                        </div>
+                        <h2>Garage</h2>
+                        <div>
+                            <select class="uiGarage" name="" id="uiGarage">
+                                <option value="" disabled="disabled" selected="selected">Choose a Garage</option>
+                            </select>
+                        </div>
+                        <h2>CentralAir</h2>
+                        <div>
+                            <select class="uiCentralAir" name="" id="uiCentralAir">
+                                <option value="" disabled="disabled" selected="selected">Choose a CentralAir</option>
+                            </select>
+                        </div>
+                        <h2>Neighborhood</h2>
+                        <div>
+                            <select class="uiNeighborhood" name="" id="uiNeighborhood">
+                                <option value="" disabled="disabled" selected="selected">Choose a Neighborhood</option>
+                            </select>
+                        </div>
+                        <h2>MSZoning</h2>
+                        <div>
+                            <select class="uiMSZoning" name="" id="uiMSZoning">
+                                <option value="" disabled="disabled" selected="selected">Choose a MSZoning</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-cell box3">
+                        <h2>BldgType</h2>
+                        <div>
+                            <select class="uiBldgType" name="" id="uiBldgType">
+                                <option value="" disabled="disabled" selected="selected">Choose a BldgType</option>
+                            </select>
+                        </div>
+                        <h2>HouseStyle</h2>
+                        <div>
+                            <select class="uiHouseStyle" name="" id="uiHouseStyle">
+                                <option value="" disabled="disabled" selected="selected">Choose a HouseStyle</option>
+                            </select>
+                        </div>
+                        <h2>RoofStyle</h2>
+                        <div>
+                            <select class="uiRoofStyle" name="" id="uiRoofStyle">
+                                <option value="" disabled="disabled" selected="selected">Choose a RoofStyle</option>
+                            </select>
+                        </div>
+                        <h2>ExterCond</h2>
+                        <div>
+                            <select class="uiExterCond" name="" id="uiExterCond">
+                                <option value="" disabled="disabled" selected="selected">Choose a ExterCond</option>
+                            </select>
+                        </div>
+                        <h2>Heating</h2>
+                        <div>
+                            <select class="uiHeating" name="" id="uiHeating">
+                                <option value="" disabled="disabled" selected="selected">Choose a Heating</option>
+                            </select>
+                        </div>
+                        <h2>Electrical</h2>
+                        <div>
+                            <select class="uiElectrical" name="" id="uiElectrical">
+                                <option value="" disabled="disabled" selected="selected">Choose a Electrical</option>
+                            </select>
+                        </div>
+                        <h2>PoolQC</h2>
+                        <div>
+                            <select class="uiPoolQC" name="" id="uiPoolQC">
+                                <option value="" disabled="disabled" selected="selected">Choose a PoolQC</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-2">
+                <button class="submit" onclick="predict()" type="button">predict_price</button>
+                <div id="Price" class="result">
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>
